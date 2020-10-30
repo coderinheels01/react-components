@@ -65,11 +65,11 @@
     "workbox-webpack-plugin": "4.3.1"
   },
   "scripts": {
-    "prestart": "npm run gen:docs",
+    "prestart": "yarn gen:docs",
     "start": "npm-run-all --parallel start:docs gen:docs-watch",
     "start:docs": "node scripts/start.js",
     "gen:docs": "node scripts/generateComponentData.js",
-    "gen:docs-watch": "npm run gen:docs --watch",
+    "gen:docs-watch": "yarn gen:docs -- --watch",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js"
   },
@@ -145,7 +145,7 @@
   },
   "devDependencies": {
     "chalk": "^4.1.0",
-    "chokidar": "^1.6.1",
+    "chokidar": "^3.4.3",
     "npm-run-all": "^4.0.2",
     "react-docgen": "^2.14.1"
   }
