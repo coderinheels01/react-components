@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const HelloWorld = message => {
+/** Hello World component that prints out Hello and the message passed. */
+const HelloWorld = ({message})  => {
     return <div>Hello {message}</div>
 }
 

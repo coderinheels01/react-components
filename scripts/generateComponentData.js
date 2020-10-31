@@ -63,7 +63,7 @@ function getExampleData(examplesPath, componentName) {
 }
 
 function getExampleFiles(examplesPath, componentName) {
-    const exampleFiles = [];
+    let exampleFiles = [];
     try {
         exampleFiles = getFiles(path.join(examplesPath, componentName));
     } catch(error) {
