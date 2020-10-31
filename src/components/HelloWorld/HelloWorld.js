@@ -10,6 +10,6 @@ HelloWorld.propTypes = {
 }
 
 HelloWorld.defaultProps = {
-    message: "World"
+    message: 'World'
 }
 export default HelloWorld;
