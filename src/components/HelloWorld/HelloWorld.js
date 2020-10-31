@@ -2,15 +2,16 @@ import React from "react";
 import PropTypes from "prop-types";
 
 /** Hello World component that prints out Hello and the message passed. */
-const HelloWorld = ({message})  => {
-    return <div>Hello {message}</div>
-}
+const HelloWorld = ({ message }) => {
+  return <div>Hello {message}</div>;
+};
 
 HelloWorld.propTypes = {
-    message: PropTypes.string
-}
+  /** Message to display*/
+  message: PropTypes.string
+};
 
 HelloWorld.defaultProps = {
-    message: 'World'
-}
+  message: "World"
+};
 export default HelloWorld;
