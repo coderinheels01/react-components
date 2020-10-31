@@ -4,7 +4,8 @@
   "private": true,
   "dependencies": {
     "react": "^16.14.0",
-    "react-dom": "^16.14.0"
+    "react-dom": "^16.14.0",
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
     "@babel/core": "7.9.0",
@@ -19,6 +20,8 @@
     "babel-preset-react-app": "^9.1.2",
     "camelcase": "^5.3.1",
     "case-sensitive-paths-webpack-plugin": "2.3.0",
+    "chalk": "^4.1.0",
+    "chokidar": "^3.4.3",
     "css-loader": "3.4.2",
     "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
@@ -40,6 +43,7 @@
     "jest-resolve": "24.9.0",
     "jest-watch-typeahead": "0.4.2",
     "mini-css-extract-plugin": "0.9.0",
+    "npm-run-all": "^4.0.2",
     "optimize-css-assets-webpack-plugin": "5.0.3",
     "pnp-webpack-plugin": "1.6.4",
     "postcss-flexbugs-fixes": "4.1.0",
@@ -51,6 +55,7 @@
     "prop-types": "^15.7.2",
     "react-app-polyfill": "^1.0.6",
     "react-dev-utils": "^10.2.1",
+    "react-docgen": "^2.14.1",
     "resolve": "1.15.0",
     "resolve-url-loader": "3.1.1",
     "sass-loader": "8.0.2",
@@ -62,11 +67,7 @@
     "webpack": "4.42.0",
     "webpack-dev-server": "3.11.0",
     "webpack-manifest-plugin": "2.2.0",
-    "workbox-webpack-plugin": "4.3.1",
-    "chalk": "^4.1.0",
-    "chokidar": "^3.4.3",
-    "npm-run-all": "^4.0.2",
-    "react-docgen": "^2.14.1"
+    "workbox-webpack-plugin": "4.3.1"
   },
   "scripts": {
     "prestart": "yarn gen:docs",
@@ -147,5 +148,4 @@
       "react-app"
     ]
   }
-
 }

@@ -1,32 +1,25 @@
-import React, {Component }from 'react';
-import Navigation from './Navigation';
-import ComponentPage from './ComponentPage';
-import componentData from '../../config/componentData';
+import React from "react";
+import Navigation from "./Navigation";
+import ComponentPage from "./ComponentPage";
+import componentData from "../../config/componentData";
+import { Switch, Route, withRouter, useLocation } from "react-router-dom";
 
-class Docs extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            route: window.location.hash.substr(1)
-        };
-    }
+const Docs = () => {
+  const { pathname } = useLocation();
+  const component = pathname.slice(1)
+    ? componentData.filter(data => data.name === pathname.slice(1))[0]
+    : componentData[0];
 
-    componentDidMount() {
-        window.addEventListener('hashchange', () => {
-            this.setState({route: window.location.hash.substr(1)})
-        })
-    }
-
-    render() {
-        const {route} = this.state;
-        const component = route ? componentData.filter( component => component.name === route)[0] : componentData[0];
-
-        return (
-            <div>
-                <Navigation components={componentData.map(component => component.name)} />
-                <ComponentPage component={component} />
-            </div>
-        )
-    }
-}
-export default Docs;
+  return (
+    <div>
+      <Navigation components={componentData.map(data => data.name)} />
+      <Switch>
+        <Route
+          path={pathname}
+          render={() => <ComponentPage component={component} />}
+        />
+      </Switch>
+    </div>
+  );
+};
+export default withRouter(Docs);
