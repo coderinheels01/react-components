@@ -8,7 +8,9 @@ const Navigation = ({ components }) => {
       {components.map((name, i) => {
         return (
           <li key={i}>
-            <Link to={`/${name}`}>{name}</Link>
+            <Link style={{ color: "#33b5ff" }} to={`/${name}`}>
+              {name}
+            </Link>
           </li>
         );
       })}
