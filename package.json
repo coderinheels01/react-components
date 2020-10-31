@@ -69,7 +69,7 @@
     "react-docgen": "^2.14.1"
   },
   "scripts": {
-    "prestart": "yarn gen:docs-watch",
+    "prestart": "yarn gen:docs",
     "start": "npm-run-all --parallel start:docs gen:docs-watch",
     "start:docs": "node scripts/start.js",
     "gen:docs": "node scripts/generateComponentData.js",
