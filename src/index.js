@@ -7,7 +7,7 @@ import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router } from "react-router-dom";
 render(
   <Router>
-    <Docs />
+    <Docs />w
   </Router>,
   document.getElementById("root")
 );
