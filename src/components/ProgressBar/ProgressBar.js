@@ -6,12 +6,15 @@ const ProgressBar = ({ percent, width, height = 15 }) => (
   <div
     style={{
       border: "1px solid #d3d3d3",
+      borderRadius: "5em",
       width: width,
-      backgroundColor: "#898787"
+      backgroundColor: "#898787",
+      overflow: "hidden"
     }}
   >
     <div
       style={{
+        borderRadius: "5em 0em 0em 5em",
         width: ProgressBar.calculateCompletionWidth(width, percent),
         height,
         backgroundColor: ProgressBar.calculateCompletionColor(percent)
