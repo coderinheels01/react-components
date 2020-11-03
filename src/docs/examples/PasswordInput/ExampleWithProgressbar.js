@@ -11,7 +11,8 @@ const ExampleWithProgressbar = () => {
   return (
     <PasswordInput
       htmlId="password-input-id"
-      placeholder="Enter your passsword"
+      name="passwordInput"
+      placeholder="Enter your password"
       onChange={e => {
         setPassword(e.currentTarget.value);
       }}
