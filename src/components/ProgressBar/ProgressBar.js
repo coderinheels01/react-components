@@ -31,8 +31,7 @@ ProgressBar.calculateCompletionWidth = (width = 0, percent = 0) => {
 
 /** Calculate progress bar color  */
 ProgressBar.calculateCompletionColor = percent => {
-  debugger;
-  if (percent === 100) return "#36a01d";
+  if (percent >= 100) return "#36a01d";
   return percent > 50 ? "#72e356" : "#e02d14";
 };
 
