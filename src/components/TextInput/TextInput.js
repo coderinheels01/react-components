@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Label from "../Label";
+import styled from "styled-components";
 
 const TextInput = ({
   htmlId,
@@ -15,25 +16,33 @@ const TextInput = ({
   error,
   ...props
 }) => {
+  const TextInputWrapper = styled.div`
+    margin-bottom: 16;
+  `;
+
+  const TextInput = styled.input`
+    border: ${error && "solid 1px red"};
+    display: block;
+  `;
+
+  const Error = styled.div`
+    color: red;
+  `;
+
   return (
-    <div style={{ marginBottom: 16 }}>
+    <TextInputWrapper>
       <Label htmlFor={htmlId} label={label} required={required} />
-      <input
+      <TextInput
         id={htmlId}
         type={type}
         name={name}
         onChange={onChange}
         placeholder={placehoder}
-        style={error && { border: "solid 1px red" }}
         {...props}
       />
       {children}
-      {error && (
-        <div className="error" style={{ color: "red" }}>
-          {error}
-        </div>
-      )}
-    </div>
+      {error && <Error>{error}</Error>}
+    </TextInputWrapper>
   );
 };
 
