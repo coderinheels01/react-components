@@ -1,12 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 
 /** Label with required field display and  html*/
 const Label = ({ label, htmlFor, required }) => {
+  const LabelWrapper = styled.label`
+    display: block;
+  `;
+  const LabelRequired = styled.span`
+    color: ${required && "red"};
+  `;
   return (
-    <label style={{ display: "block" }} htmlFor={htmlFor}>
-      {label} {required && <span style={{ color: "red" }}> * </span>}
-    </label>
+    <LabelWrapper htmlFor={htmlFor}>
+      {label}
+      <LabelRequired style={{ color: "red" }}> * </LabelRequired>
+    </LabelWrapper>
   );
 };
 
