@@ -8,12 +8,12 @@ const Label = ({ label, htmlFor, required }) => {
     display: block;
   `;
   const LabelRequired = styled.span`
-    color: ${required && "red"};
+    color: red;
   `;
   return (
     <LabelWrapper htmlFor={htmlFor}>
       {label}
-      <LabelRequired style={{ color: "red" }}> * </LabelRequired>
+      {required && <LabelRequired> * </LabelRequired>}
     </LabelWrapper>
   );
 };
