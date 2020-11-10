@@ -12,6 +12,7 @@ const ExampleWithEyeIcon = () => {
       onChange={e => {
         setPassword(e.currentTarget.value);
       }}
+      value={password}
       htmlId="password-input"
       name="passwordInput"
       quality={calculateQuality()}

@@ -3,6 +3,18 @@ import PropTypes from "prop-types";
 import Label from "../Label";
 import styled from "styled-components";
 
+const TextInputWrapper = styled.div`
+  margin-bottom: 16;
+`;
+
+const TextInputInner = styled.input(props => ({
+  border: props.error ? "solid 1px red" : ""
+}));
+
+const Error = styled.div`
+  color: red;
+`;
+
 const TextInput = ({
   htmlId,
   label,
@@ -15,36 +27,22 @@ const TextInput = ({
   value,
   error,
   ...props
-}) => {
-  const TextInputWrapper = styled.div`
-    margin-bottom: 16;
-  `;
-
-  const TextInput = styled.input`
-    border: ${error && "solid 1px red"};
-    display: block;
-  `;
-
-  const Error = styled.div`
-    color: red;
-  `;
-
-  return (
-    <TextInputWrapper>
-      <Label htmlFor={htmlId} label={label} required={required} />
-      <TextInput
-        id={htmlId}
-        type={type}
-        name={name}
-        onChange={onChange}
-        placeholder={placehoder}
-        {...props}
-      />
-      {children}
-      {error && <Error>{error}</Error>}
-    </TextInputWrapper>
-  );
-};
+}) => (
+  <TextInputWrapper>
+    <Label htmlFor={htmlId} label={label} required={required} />
+    <TextInputInner
+      id={htmlId}
+      type={type}
+      name={name}
+      onChange={onChange}
+      placeholder={placehoder}
+      error={error}
+      {...props}
+    />
+    {children}
+    {error && <Error>{error}</Error>}
+  </TextInputWrapper>
+);
 
 TextInput.propTypes = {
   /** HTML id for tying label and input together. Used for testing purpose*/
