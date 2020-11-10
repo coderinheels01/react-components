@@ -14,9 +14,9 @@ const ProgressBar = ({ percent, width, height = 15 }) => {
 
   const ProgressBarPercent = styled.div`
     border-radius: 5em 0em 0em 5em;
-    width: ${ProgressBar.calculateCompletionWidth(width, percent)}px;
+    width: ${calculateCompletionWidth(width, percent)}px;
     height: ${height}px;
-    background-color: ${ProgressBar.calculateCompletionColor(percent)};
+    background-color: ${calculateCompletionColor(percent)};
   `;
   return (
     <ProgressBarWrapper>
@@ -26,12 +26,12 @@ const ProgressBar = ({ percent, width, height = 15 }) => {
 };
 
 /** Calculate completed progress */
-ProgressBar.calculateCompletionWidth = (width = 0, percent = 0) => {
+const calculateCompletionWidth = (width = 0, percent = 0) => {
   return parseInt(width * (percent / 100), 10);
 };
 
 /** Calculate progress bar color  */
-ProgressBar.calculateCompletionColor = percent => {
+const calculateCompletionColor = percent => {
   if (percent >= 100) return "#36a01d";
   return percent > 50 ? "#72e356" : "#e02d14";
 };
