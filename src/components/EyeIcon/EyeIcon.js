@@ -4,7 +4,7 @@ import { faEye } from "@fortawesome/free-solid-svg-icons";
 
 /** Eye icon */
 const EyeIcon = () => {
-  return <FontAwesomeIcon icon={faEye} />;
+  return <FontAwesomeIcon icon={faEye} color="#409AB7" />;
 };
 
 export default EyeIcon;
