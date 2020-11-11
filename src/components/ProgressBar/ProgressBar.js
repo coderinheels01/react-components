@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { calculateCompletionWidth } from "../../utils/calculateCompletionWidth";
+import { calculateCompletionColor } from "../../utils/calculateCompletionColor";
 
 export const ProgressBarWrapper = styled.div(props => ({
   border: "1px solid #d3d3d3",
@@ -13,15 +14,20 @@ export const ProgressBarWrapper = styled.div(props => ({
 
 export const ProgressBarPercent = styled.div(props => ({
   borderRadius: "5em 0em 0em 5em",
-  width: `${calculateCompletionWidth(props.width, props.percent)}px`,
+  width: `${props.width}px`,
   height: `${props.height}px`,
-  backgroundColor: `${calculateCompletionColor(props.percent)}`
+  backgroundColor: props.backgroundColor
 }));
 
 /** Progress bar that display progress*/
 const ProgressBar = ({ percent, width, height = 15 }) => (
   <ProgressBarWrapper width={width}>
-    <ProgressBarPercent height={height} percent={percent} />
+    <ProgressBarPercent
+      width={calculateCompletionWidth(width, percent)}
+      height={height}
+      percent={percent}
+      backgroundColor={calculateCompletionColor(percent)}
+    />
   </ProgressBarWrapper>
 );
 
