@@ -35,7 +35,7 @@ const PasswordInput = ({
         required
       >
         {showTogglePasswordIcon && (
-          <Link onClick={() => setShowPassword(!showPassword)}>
+          <Link to="#" onClick={() => setShowPassword(!showPassword)}>
             <EyeIcon />
           </Link>
         )}
@@ -65,7 +65,7 @@ PasswordInput.propTypes = {
   quality: PropTypes.number,
 
   /** Flag to show or hide eye icon to show/hide visibility of password*/
-  showTogglePasswordIcon: false,
+  showTogglePasswordIcon: PropTypes.bool,
 
   /** Password Input name */
   name: PropTypes.string,
