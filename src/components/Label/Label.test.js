@@ -5,6 +5,7 @@ import Label, { LabelWrapper, LabelRequired } from "./Label";
 
 describe("Label", () => {
   let props;
+
   const shallowLabel = () => shallow(<Label {...props} />);
 
   beforeEach(() => {
@@ -14,6 +15,7 @@ describe("Label", () => {
       required: faker.random.boolean()
     };
   });
+
   it("should render a 'LabelWrapper' ", () => {
     expect(shallowLabel().find(LabelWrapper).length).toBe(1);
   });

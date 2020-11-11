@@ -3,15 +3,15 @@ import PropTypes from "prop-types";
 import Label from "../Label";
 import styled from "styled-components";
 
-const TextInputWrapper = styled.div`
+export const TextInputWrapper = styled.div`
   margin-bottom: 16;
 `;
 
-const TextInputInner = styled.input(props => ({
+export const TextInputInner = styled.input(props => ({
   border: props.error ? "solid 1px red" : ""
 }));
 
-const Error = styled.div`
+export const Error = styled.div`
   color: red;
 `;
 
@@ -21,7 +21,7 @@ const TextInput = ({
   required = false,
   name,
   type = "text",
-  placehoder,
+  placeholder,
   children,
   onChange,
   value,
@@ -35,7 +35,7 @@ const TextInput = ({
       type={type}
       name={name}
       onChange={onChange}
-      placeholder={placehoder}
+      placeholder={placeholder}
       error={error}
       {...props}
     />
@@ -55,7 +55,7 @@ TextInput.propTypes = {
   onChange: PropTypes.func.isRequired,
 
   /** Mark input with asterisk if it is required */
-  required: false,
+  required: PropTypes.bool,
 
   /** Input name */
   name: PropTypes.string,
@@ -64,7 +64,7 @@ TextInput.propTypes = {
   type: PropTypes.oneOf(["text", "password", "number"]),
 
   /** Placeholder to display when empty */
-  placehoder: PropTypes.string,
+  placeholder: PropTypes.string,
 
   /** Child components to display next to the input*/
   children: PropTypes.node,

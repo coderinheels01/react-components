@@ -8,7 +8,7 @@ const ExamplePlaceholder = () => {
       onChange={() => {}}
       htmlId="first-name-id"
       name="firstName"
-      placehoder="Enter First Name"
+      placeholder="Enter First Name"
     />
   );
 };
