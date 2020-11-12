@@ -34,11 +34,7 @@ const PasswordInput = ({
         error={error}
         required
       >
-        {showTogglePasswordIcon && (
-          <Link to="#" onClick={() => setShowPassword(!showPassword)}>
-            <EyeIcon />
-          </Link>
-        )}
+        {showTogglePasswordIcon && <EyeIcon />}
         <ProgressBar percent={quality} width={150} height={8} />
       </TextInput>
     </div>
