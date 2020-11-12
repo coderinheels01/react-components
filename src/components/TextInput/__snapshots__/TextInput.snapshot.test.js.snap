@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextInput TextInput with type password render TextInput of type password 1`] = `
+<div
+  className="sc-dlfnbm InidV"
+>
+  <label
+    className="sc-bdfBwQ gaSFkq"
+    htmlFor="test html id "
+  >
+    test label
+    <span
+      className="sc-gsTCUz wIMML"
+    >
+       * 
+    </span>
+  </label>
+  <input
+    className="sc-hKgILt brxkeH"
+    id="test html id "
+    name="test name"
+    onChange={[MockFunction]}
+    placeholder="test placeholder"
+    type="password"
+  />
+  <div />
+  <div
+    className="sc-eCssSg dIgmt"
+  >
+    some error
+  </div>
+</div>
+`;
+
+exports[`TextInput TextInput with type text render TextInput of type text 1`] = `
+<div
+  className="sc-dlfnbm InidV"
+>
+  <label
+    className="sc-bdfBwQ gaSFkq"
+    htmlFor="test html id "
+  >
+    test label
+    <span
+      className="sc-gsTCUz wIMML"
+    >
+       * 
+    </span>
+  </label>
+  <input
+    className="sc-hKgILt brxkeH"
+    id="test html id "
+    name="test name"
+    onChange={[MockFunction]}
+    placeholder="test placeholder"
+    type="text"
+  />
+  <div />
+  <div
+    className="sc-eCssSg dIgmt"
+  >
+    some error
+  </div>
+</div>
+`;
