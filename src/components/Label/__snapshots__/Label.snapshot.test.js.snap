@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Label snapshot test when required props is false should not create 'LabelRequired'  1`] = `
+<label
+  className="sc-bdfBwQ gaSFkq"
+  htmlFor="test-html-id"
+>
+  test label 
+</label>
+`;
+
+exports[`Label snapshot test when required props is true should not create 'LabelRequired'  1`] = `
+<label
+  className="sc-bdfBwQ gaSFkq"
+  htmlFor="test-html-id"
+>
+  test label 
+  <span
+    className="sc-gsTCUz wIMML"
+  >
+     * 
+  </span>
+</label>
+`;
