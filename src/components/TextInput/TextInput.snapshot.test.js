@@ -26,6 +26,10 @@ describe("TextInput", () => {
     it("render TextInput of type text", () => {
       expect(textInputTree).toMatchSnapshot();
     });
+
+    afterEach(() => {
+      textInputTree.unmount();
+    });
   });
 
   describe("TextInput with type password", () => {
@@ -47,6 +51,9 @@ describe("TextInput", () => {
 
     it("render TextInput of type password", () => {
       expect(textInputTree).toMatchSnapshot();
+    });
+    afterEach(() => {
+      textInputTree.unmount();
     });
   });
 });

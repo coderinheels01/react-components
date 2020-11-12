@@ -18,4 +18,8 @@ describe("ProgressBar", () => {
   it("render ProgressBar with 50 percent, 100 width and 20 height", () => {
     expect(progressBarTree).toMatchSnapshot();
   });
+
+  afterEach(() => {
+    progressBarTree.unmount();
+  });
 });
